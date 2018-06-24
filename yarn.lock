@@ -205,9 +205,9 @@ b64@4.x.x:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/b64/-/b64-4.0.0.tgz#c37f587f0a383c7019e821120e8c3f58f0d22772"
 
-bacjs@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/bacjs/-/bacjs-1.0.4.tgz#80fde653de3bc633391a3bb19599ef64cf906949"
+bacjs@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/bacjs/-/bacjs-1.0.9.tgz#48fd2dabe3d9465ecde5d822038a7c7461fdbc56"
   dependencies:
     "@types/bcrypt" "^2.0.0"
     "@types/bcryptjs" "^2.4.1"
