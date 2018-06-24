@@ -6,7 +6,8 @@ class Todo extends DBModel {
 		return {
 			createdAt: {type: Number, index: true},
 			title: String,
-			description: String
+			description: String,
+			id: {type: Number, unique: true}
 		}
 	}
 }
@@ -14,7 +15,8 @@ class Todo extends DBModel {
 export interface ITodo extends Document {
 	createdAt: number;
 	title: string;
-	description: string
+	description: string,
+	id: number
 }
 
 export default Todo.$model<ITodo>();
