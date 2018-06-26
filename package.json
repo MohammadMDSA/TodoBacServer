@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "bacjs": "^1.0.10"
+    "@types/dotenv": "^4.0.3",
+    "bacjs": "^1.0.10",
+    "dotenv": "^6.0.0"
   }
 }
