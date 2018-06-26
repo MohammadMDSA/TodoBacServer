@@ -1,4 +1,4 @@
-import DBModel from "bacjs/out/mongodb/Model"
+import DBModel from "bacjs/out/MongoDB/Model"
 import { SchemaDefinition, Document } from "mongoose";
 
 class Todo extends DBModel {
