@@ -3,7 +3,7 @@ import Config from "bacjs/out/server/config";
 
 let config: Config = {
 	routers: [
-		{prefix: "/api", route: "./controllers/todo", }
+		{ prefix: "/api", route: "./controllers/todo" }
 	],
 
 	// auth: {
