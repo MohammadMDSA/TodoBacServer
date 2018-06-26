@@ -1,5 +1,8 @@
 import Server from "bacjs/out/server/server";
 import Config from "bacjs/out/server/config";
+import * as DotEnv from "dotenv";
+
+DotEnv.config();
 
 let config: Config = {
 	routers: [
@@ -7,7 +10,7 @@ let config: Config = {
 	],
 
 	// auth: {
-	// 	secret: "My secret",
+	// 	secret: process.env.AUTH_SECRET,
 	// 	session: {
 	// 		limited: false
 	// 	}
@@ -16,7 +19,7 @@ let config: Config = {
 	mongo: {
 		connection: "mongodb://localhost/test"
 	},
-	port: 9000
+	port: Number(process.env.PORT)
 };
 
 let server = new Server(config);
