@@ -11,7 +11,7 @@ export default class TodoController extends Controller {
 		this.assign("", [RequestType.PUT], async (req, h) => {
 			let { createdAt, title, description } = (req.payload) as any;
 
-			let count = (await Todo.find({})).length;
+			let count = await Todo.count({}).exec();
 
 			let model = new Todo({ createdAt, title, description, id: count + 1 });
 
