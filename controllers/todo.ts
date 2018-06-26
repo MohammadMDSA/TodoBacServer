@@ -13,13 +13,15 @@ export default class TodoController extends Controller {
 
 			let count = (await Todo.find({})).length;
 
-			let model = new Todo({createdAt, title, description, id: count + 1});
+			let model = new Todo({ createdAt, title, description, id: count + 1 });
 
 			return await model.save();
 		});
 
 		this.assign("/{id}", [RequestType.GET], async (req, h) => {
-			return req.params;
+			let result = await Todo.findOne({ id: req.params.id }).exec();
+
+			return result || {};
 		});
 	}
 }
