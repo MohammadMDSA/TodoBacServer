@@ -3,10 +3,9 @@ import Todo from "../models/Todo";
 
 export default class TodoController extends Controller {
 	public init(): void {
-		this._prefix = "Todo"
-
 		this.assign("", [RequestType.GET], async (req, h) => {
-			await Todo.find({});
+			let result = await Todo.find({});
+			return result;
 		});
 
 		this.assign("/{id}", [RequestType.GET], async(req, h) => {
