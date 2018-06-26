@@ -219,9 +219,9 @@ b64@4.x.x:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/b64/-/b64-4.0.0.tgz#c37f587f0a383c7019e821120e8c3f58f0d22772"
 
-bacjs@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/bacjs/-/bacjs-1.0.10.tgz#24802f3f74f10699e1c668e28b4d1c2ca542a874"
+bacjs@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/bacjs/-/bacjs-1.0.11.tgz#9527c2d94f2f757c679d6a28cc4bbba91e87fd5d"
   dependencies:
     "@types/app-root-path" "^1.2.4"
     "@types/bcrypt" "^2.0.0"
