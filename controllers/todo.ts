@@ -8,8 +8,18 @@ export default class TodoController extends Controller {
 			return result;
 		});
 
-		this.assign("/{id}", [RequestType.GET], async(req, h) => {
+		this.assign("", [RequestType.PUT], async (req, h) => {
+			let { createdAt, title, description } = (req.payload) as any;
+
+			let count = (await Todo.find({})).length;
+
+			let model = new Todo({createdAt, title, description, id: count + 1});
+
+			return await model.save();
+		});
+
+		this.assign("/{id}", [RequestType.GET], async (req, h) => {
 			return req.params;
-		})
+		});
 	}
 }
