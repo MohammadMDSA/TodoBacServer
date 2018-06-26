@@ -4,10 +4,10 @@ import { SchemaDefinition, Document } from "mongoose";
 class Todo extends DBModel {
 	protected static $schema(): SchemaDefinition {
 		return {
-			createdAt: {type: Number, index: true},
-			title: String,
-			description: String,
-			id: {type: Number, unique: true}
+			createdAt: { type: Number, index: true, required: true },
+			title: { type: String, required: true },
+			description: { type: String, required: true },
+			id: { type: Number, unique: true, required: true}
 		}
 	}
 }
