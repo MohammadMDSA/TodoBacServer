@@ -1,5 +1,5 @@
-import Controller, { RequestType } from "bacjs/out/server/controller";
-import Todo from "../models/Todo";
+import Controller, { RequestType, AnyRequestType } from "bacjs/out/server/controller";
+import Todo from "../models/todo";
 
 export default class TodoController extends Controller {
 	public init(): void {
@@ -23,5 +23,9 @@ export default class TodoController extends Controller {
 
 			return result || {};
 		});
+
+		this.assign("/test", AnyRequestType.Any, (req, h) => {
+			return "Hello world";
+		})
 	}
 }
